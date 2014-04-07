@@ -31,6 +31,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "bootstrap.sh"     # Bootstrapping: package installation (phase:1)
   config.vm.provision "shell", path: "config.d/base.sh" # Configuration: node-common          (phase:2)
 
+  # eth1:dhcp
+  config.vm.network :public_network
+
   1.times.each { |i|
     name = sprintf("node%02d", i + 1)
     config.vm.define "#{name}" do |node|
