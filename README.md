@@ -62,6 +62,65 @@ received on stderr:
 $ sudo umount /mnt
 ```
 
+```
+$ sudo cobbler distro report
+Name                           : Fedora20-x86_64
+Architecture                   : x86_64
+TFTP Boot Files                : {}
+Breed                          : redhat
+Comment                        :
+Fetchable Files                : {}
+Initrd                         : /var/www/cobbler/ks_mirror/Fedora20-x86_64/images/pxeboot/initrd.img
+Kernel                         : /var/www/cobbler/ks_mirror/Fedora20-x86_64/images/pxeboot/vmlinuz
+Kernel Options                 : {'repo': '$tree'}
+Kernel Options (Post Install)  : {}
+Kickstart Metadata             : {'tree': 'http://@@http_server@@/cblr/links/Fedora20-x86_64'}
+Management Classes             : []
+OS Version                     : fedora20
+Owners                         : ['admin']
+Red Hat Management Key         : <<inherit>>
+Red Hat Management Server      : <<inherit>>
+Template Files                 : {}
+
+```
+
+```
+$ sudo cobbler profile report
+Name                           : Fedora20-x86_64
+TFTP Boot Files                : {}
+Comment                        :
+DHCP Tag                       : default
+Distribution                   : Fedora20-x86_64
+Enable gPXE?                   : 0
+Enable PXE Menu?               : 1
+Fetchable Files                : {}
+Kernel Options                 : {}
+Kernel Options (Post Install)  : {}
+Kickstart                      : /var/lib/cobbler/kickstarts/sample_end.ks
+Kickstart Metadata             : {}
+Management Classes             : []
+Management Parameters          : <<inherit>>
+Name Servers                   : []
+Name Servers Search Path       : []
+Owners                         : ['admin']
+Parent Profile                 :
+Proxy                          :
+Red Hat Management Key         : <<inherit>>
+Red Hat Management Server      : <<inherit>>
+Repos                          : []
+Server Override                : <<inherit>>
+Template Files                 : {}
+Virt Auto Boot                 : 1
+Virt Bridge                    : xenbr0
+Virt CPUs                      : 1
+Virt Disk Driver Type          : raw
+Virt File Size(GB)             : 5
+Virt Path                      :
+Virt RAM (MB)                  : 512
+Virt Type                      : kvm
+
+```
+
 License
 -------
 
